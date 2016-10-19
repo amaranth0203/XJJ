@@ -1,0 +1,4 @@
+XJJ_client.o: XJJ_client.c XJJ_util.h
+XJJ_server.o: XJJ_server.c XJJ_util.h
+XJJ_util.o: XJJ_util.c XJJ_util.h
+XJJ_util.o: XJJ_util.h
