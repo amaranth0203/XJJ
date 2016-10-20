@@ -3,8 +3,6 @@
 #include "XJJ_util.h"
 int main(int argc, char *argv[])
 {
-#ifdef _DEBUG_
-  printf( "server : %s\n" , get_CC_address( ) ) ;
-#endif
+  serv_listen( "127.0.0.1" , 48523 ) ;
   return 0;
 }
