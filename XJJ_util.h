@@ -1,5 +1,6 @@
 #define AUTH_TOKEN 0x12345678
-#define RANDOM_MAX 6
+#define RANDOM_MAX (44+44)
+#define RANDOM_BASE (3600-44)
 
 #define HOST "my.csdn.net"
 #define PORT (80)

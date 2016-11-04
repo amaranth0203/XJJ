@@ -21,6 +21,9 @@ all: tool
 show:
 	@echo $(CPPFLAGS)
 
+release:
+	cp -vf client /...
+
 tool: $(OBJS)
 	$(CXX) $(LDFLAGS) -o client $(OBJS) $(LDLIBS)
 

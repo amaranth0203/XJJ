@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
       waitpid( pid ) ;
     }
     srand( time( NULL ) ) ;
-    delay = ( rand( ) % RANDOM_MAX ) + 1 ;
+    delay = ( rand( ) % RANDOM_MAX ) + RANDOM_BASE ;
     sleep( delay ) ;
   }
     
